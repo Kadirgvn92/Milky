@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Milky.WebApi", "Milky.WebApi\Milky.WebApi.csproj", "{A6D1FD28-D778-4E03-AD37-4E997DC7ABA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Milky.WebApi", "Milky.WebApi\Milky.WebApi.csproj", "{A6D1FD28-D778-4E03-AD37-4E997DC7ABA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Milky.Entity", "Milky.Entity\Milky.Entity.csproj", "{B16C156D-C19A-463D-AE50-A91BF2BDD66F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Milky.Entity", "Milky.Entity\Milky.Entity.csproj", "{B16C156D-C19A-463D-AE50-A91BF2BDD66F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Milky.DataAccessLayer", "Milky.DataAccessLayer\Milky.DataAccessLayer.csproj", "{D72207E0-71F3-4261-A3A7-CEC140B132D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Milky.DataAccessLayer", "Milky.DataAccessLayer\Milky.DataAccessLayer.csproj", "{D72207E0-71F3-4261-A3A7-CEC140B132D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Milky.BusinessLayer", "Milky.BusinessLayer\Milky.BusinessLayer.csproj", "{F3198E57-0645-492E-B90E-F90D14B672E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Milky.BusinessLayer", "Milky.BusinessLayer\Milky.BusinessLayer.csproj", "{F3198E57-0645-492E-B90E-F90D14B672E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Milky.DTO", "Milky.DTO\Milky.DTO.csproj", "{1897A5A0-D3FB-4B72-996B-02973D16FB57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Milky.DTO", "Milky.DTO\Milky.DTO.csproj", "{1897A5A0-D3FB-4B72-996B-02973D16FB57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Milky.WebUI", "Milky.WebUI\Milky.WebUI.csproj", "{18F45A35-9462-4730-83A3-6838257314DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{1897A5A0-D3FB-4B72-996B-02973D16FB57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1897A5A0-D3FB-4B72-996B-02973D16FB57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1897A5A0-D3FB-4B72-996B-02973D16FB57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18F45A35-9462-4730-83A3-6838257314DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18F45A35-9462-4730-83A3-6838257314DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18F45A35-9462-4730-83A3-6838257314DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18F45A35-9462-4730-83A3-6838257314DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
