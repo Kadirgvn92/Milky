@@ -1,9 +1,19 @@
+using Milky.BusinessLayer.Extensions;
+using Milky.DataAccessLayer.Context;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+builder.Services.ContainerDependencies();
+
+builder.Services.AddDbContext<MilkyContext>();
+
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
