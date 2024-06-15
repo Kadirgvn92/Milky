@@ -1,0 +1,6 @@
+@Milky.WebApi_HostAddress = http://localhost:5014
+
+GET {{Milky.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
