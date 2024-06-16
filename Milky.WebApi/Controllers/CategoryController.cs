@@ -40,4 +40,10 @@ public class CategoryController : ControllerBase
         _categoryService.TUpdate(category);
         return Ok("Kategori başarılı şekilde güncellendi");
     }
+    [HttpGet("GetCategoryById")]
+    public IActionResult GetCategoryById(int id)
+    {
+        var values = _categoryService.TGetByID(id);
+        return Ok(values);
+    }
 }
