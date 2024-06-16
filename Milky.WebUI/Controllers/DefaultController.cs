@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Milky.WebApi.DTOs.Category;
+using Milky.WebUI.DTOs.Category;
 using Newtonsoft.Json;
 using System.Text.Json.Serialization;
 

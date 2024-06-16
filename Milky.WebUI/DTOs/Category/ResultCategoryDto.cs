@@ -1,4 +1,4 @@
-﻿namespace Milky.WebApi.DTOs.Category;
+﻿namespace Milky.WebUI.DTOs.Category;
 
 public class ResultCategoryDto
 {
