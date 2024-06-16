@@ -1,0 +1,90 @@
+﻿@using Milky.WebUI.Areas.Admin.Models
+@model ProductViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="content mt-0 p-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Ürünler</div>
+                        </div>
+                        <div class="card-body">
+
+                            <div class="card-body p-0">
+                                <div class="mailbox-controls">
+                                    <div class="card-sub">
+                                        Ürünleri bu sayfada görüntüleyebilir veya güncelleyebilirsiniz.
+                                    </div>
+                                    <div class="float-right">
+                                        @Model.PageInfo.CurrentPage - @Model.PageInfo.ItemsPerPage / @Model.PageInfo.TotalPages()
+                                        <div class="btn-group">
+                                            @if (Model.PageInfo.CurrentPage > 1)
+                                            {
+                                                <a href="/Admin/Product/Index/?page=@(Model.PageInfo.CurrentPage-1)" class="btn btn-default btn-sm"><i class="fas fa-chevron-left"></i> </a>
+                                            }
+                                            @if (Model.PageInfo.CurrentPage < Model.PageInfo.TotalPages())
+                                            {
+                                                <a href="/Admin/Product/Index/?page=@(Model.PageInfo.CurrentPage+1)" class="btn btn-default btn-sm">><i class="fa fa-chevron-right"></i></a>
+                                            }
+                                        </div>
+                                        <!-- /.btn-group -->
+                                    </div>
+                                    <!-- /.float-right -->
+                                </div>
+                                <table class="table align-items-center table-striped mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-uppercase text-primary text-sm font-weight-bolder ">Ürün Resmi</th>
+                                            <th class="text-uppercase text-primary text-sm font-weight-bolder ">Ürün Adı</th>
+                                            <th class="text-uppercase text-primary text-sm font-weight-bolder ">Yeni Fiyat</th>
+                                            <th class="text-uppercase text-primary text-sm font-weight-bolder ">Eski Fiyat</th>
+                                            <th class="text-uppercase text-primary text-sm font-weight-bolder text-center">Sil</th>
+                                            <th class="text-uppercase text-primary text-sm font-weight-bolder text-center">Durum</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="border-top">
+                                        @foreach (var item in Model.Products)
+                                        {
+                                            <tr>
+                                                <td class="align-middle" width="150px">
+                                                    <div>
+                                                        <img src="/dairy/img/@item.ImageUrl" class="rounded me-3" style="width:100px;height:75px;">
+                                                    </div>
+                                                </td>
+                                              
+                                                <td class="align-middle">
+                                                    <span class="text-s  mb-0">@item.ProductName</span>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <span class="text-s  mb-0">@item.NewPrice ₺ </span>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <span class="text-s  mb-0">@item.OldPrice ₺ </span>
+                                                </td>
+                                                <td width="100px" class="align-middle text-center">
+                                                    <a href="/Admin/Product/DeleteArticle/@item.ProductId" class="btn bg-gradient-danger ">Sil</a>
+                                                </td>
+                                                <td width="100px" class="align-middle text-center">
+                                                    <a href="/Admin/Product/UpdateArticle/@item.ProductId" class="btn bg-gradient-warning ">Güncelle</a>
+                                                </td>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
