@@ -5,9 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Milky.Entity.Concrete;
-public class Product
+public class Product : BaseEntity
 {
-    public int ProductID { get; set; }
     public string? ProductName { get; set; }
     public decimal NewPrice { get; set; }
     public decimal OldPrice { get; set; }

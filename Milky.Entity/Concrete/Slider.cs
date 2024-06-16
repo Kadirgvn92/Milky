@@ -5,9 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Milky.Entity.Concrete;
-public class Slider
+public class Slider : BaseEntity
 {
-    public int SliderID { get; set; }
     public string? ImageUrl { get; set; }
     public string? Description1 { get; set; }
     public string? Description2 { get; set; }

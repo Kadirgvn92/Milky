@@ -11,7 +11,7 @@ using Milky.DataAccessLayer.Context;
 namespace Milky.DataAccessLayer.Migrations
 {
     [DbContext(typeof(MilkyContext))]
-    [Migration("20240615100457_init")]
+    [Migration("20240616192523_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -26,30 +26,36 @@ namespace Milky.DataAccessLayer.Migrations
 
             modelBuilder.Entity("Milky.Entity.Concrete.Category", b =>
                 {
-                    b.Property<int>("CategoryID")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("CategoryName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("CategoryID");
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("ID");
 
                     b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("Milky.Entity.Concrete.Product", b =>
                 {
-                    b.Property<int>("ProductID")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<decimal>("NewPrice")
                         .HasColumnType("decimal(18,2)");
@@ -63,18 +69,18 @@ namespace Milky.DataAccessLayer.Migrations
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
 
-                    b.HasKey("ProductID");
+                    b.HasKey("ID");
 
                     b.ToTable("Products");
                 });
 
             modelBuilder.Entity("Milky.Entity.Concrete.Slider", b =>
                 {
-                    b.Property<int>("SliderID")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SliderID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("Description1")
                         .HasColumnType("nvarchar(max)");
@@ -85,7 +91,10 @@ namespace Milky.DataAccessLayer.Migrations
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("SliderID");
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("ID");
 
                     b.ToTable("Sliders");
                 });

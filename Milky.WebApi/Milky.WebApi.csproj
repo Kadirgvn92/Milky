@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Milky.BusinessLayer\Milky.BusinessLayer.csproj" />
+    <ProjectReference Include="..\Milky.DTO\Milky.DTO.csproj" />
   </ItemGroup>
 
 </Project>

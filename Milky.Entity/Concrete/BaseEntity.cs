@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Milky.Entity.Concrete;
-public class Category : BaseEntity
+public class BaseEntity
 {
-    public string? CategoryName { get; set; }
+    public int ID { get; set; }
     public bool IsDeleted { get; set; }
 }
