@@ -16,7 +16,15 @@ public class MilkyContext :DbContext
     {
         optionsBuilder.UseSqlServer("Data Source=DESKTOP-A6C5CRN\\MSSQLSERVER01;Initial Catalog = MilkyDb;Integrated Security=True;Trust Server Certificate=True;");
     }
+
     public DbSet<Category> Categories { get; set; }
+    public DbSet<About> Abouts { get; set; }
+    public DbSet<Contact> Contacts { get; set; }
+    public DbSet<Employee> Employees { get; set; }
+    public DbSet<Services> Services { get; set; }
+    public DbSet<SocialMedia>  SocialMedias { get; set; }
+    public DbSet<Statistic>  Statistics { get; set; }
+    public DbSet<Testimonial>  Testimonials { get; set; }
     public DbSet<Product> Products { get; set; }
     public DbSet<Slider> Sliders { get; set; }
 }
