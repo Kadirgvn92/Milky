@@ -22,5 +22,26 @@ public static class Extension
 
         services.AddScoped<IProductDal, EfProductDal>();
         services.AddScoped<IProductService, ProductManager>();
+
+        services.AddScoped<IAboutDal, EfAboutDal>();
+        services.AddScoped<IAboutService, AboutManager>();
+
+        services.AddScoped<IContactDal, EfContactDal>();
+        services.AddScoped<IContactService, ContactManager>();
+
+        services.AddScoped<IEmployeeDal, EfEmployeeDal>();
+        services.AddScoped<IEmployeeService, EmployeeManager>();
+
+        services.AddScoped<INewsletterDal, EfNewsletterDal>();
+        services.AddScoped<INewsletterService, NewsletterManager>();
+
+        services.AddScoped<IServiceDal, EfServicesDal>();
+        services.AddScoped<IServicesService, ServicesManager>();
+
+        services.AddScoped<IStatisticDal, EfStatisticDal>();
+        services.AddScoped<IStatisticService, StatisticManager>();
+
+        services.AddScoped<ITestimonialDal, EfTestimonialDal>();
+        services.AddScoped<ITestimonialService, TestimonialManager>();
     }
 }

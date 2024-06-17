@@ -32,7 +32,7 @@ public class ProductController : ControllerBase
         return Ok("Ürün başarıyla silindi");
     }
     [HttpPut]
-    public IActionResult PutProduct(Product Product)
+    public IActionResult UpdateProduct(Product Product)
     {
         _productService.TUpdate(Product);
         return Ok("Ürün başarılı şekilde güncellendi");

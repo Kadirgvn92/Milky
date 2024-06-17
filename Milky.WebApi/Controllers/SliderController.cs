@@ -32,7 +32,7 @@ public class SliderController : ControllerBase
         return Ok("Slider başarıyla silindi");
     }
     [HttpPut]
-    public IActionResult PutSlider(Slider Slider)
+    public IActionResult UpdateSlider(Slider Slider)
     {
         _SliderService.TUpdate(Slider);
         return Ok("Slider başarılı şekilde güncellendi");

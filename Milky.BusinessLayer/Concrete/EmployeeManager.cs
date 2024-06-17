@@ -1,4 +1,5 @@
-﻿using Milky.DataAccessLayer.Abstract;
+﻿using Milky.BusinessLayer.Abstract;
+using Milky.DataAccessLayer.Abstract;
 using Milky.Entity.Concrete;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Milky.BusinessLayer.Concrete;
-public class EmployeeManager : IEmployeeDal
+public class EmployeeManager : IEmployeeService
 {
     private readonly IEmployeeDal _employeeDal;
 
@@ -16,27 +17,27 @@ public class EmployeeManager : IEmployeeDal
         _employeeDal = employeeDal;
     }
 
-    public void Create(Employee entity)
+    public void TCreate(Employee entity)
     {
         _employeeDal.Create(entity);
     }
 
-    public void Delete(int id)
+    public void TDelete(int id)
     {
         _employeeDal.Delete(id);
     }
 
-    public List<Employee> GetAll()
+    public List<Employee> TGetAll()
     {
         return _employeeDal.GetAll();
     }
 
-    public Employee GetByID(int id)
+    public Employee TGetByID(int id)
     {
        return _employeeDal.GetByID(id);
     }
 
-    public void Update(Employee entity)
+    public void TUpdate(Employee entity)
     {
         _employeeDal.Update(entity);
     }

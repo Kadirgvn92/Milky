@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Milky.DataAccessLayer.EntityFramework;
-public class EfTestimonialDal : GenericRepository<Testimonial>, ITestimonialService
+public class EfTestimonialDal : GenericRepository<Testimonial>, ITestimonialDal
 {
     public EfTestimonialDal(MilkyContext context) : base(context)
     {

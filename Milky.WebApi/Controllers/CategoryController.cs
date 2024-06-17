@@ -35,7 +35,7 @@ public class CategoryController : ControllerBase
         return Ok("Kategori başarıyla silindi");
     }
     [HttpPut]
-    public IActionResult PutCategory(Category category)
+    public IActionResult UpdateCategory(Category category)
     {
         _categoryService.TUpdate(category);
         return Ok("Kategori başarılı şekilde güncellendi");
