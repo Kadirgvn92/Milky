@@ -146,4 +146,15 @@ public class ProductController : Controller
         return View(dto); // Hata durumunda aynı sayfayı yeniden yükleyin
     }
 
+    public async Task<IActionResult> Delete(int id)
+    {
+        var client = _httpClientFactory.CreateClient();
+        var responseMessage = await client.DeleteAsync("https://localhost:44320/api/Product?id=" + id);
+        if (responseMessage.IsSuccessStatusCode)
+        {
+            return RedirectToAction("Index");
+        }
+        return View();
+    }
+
 }
