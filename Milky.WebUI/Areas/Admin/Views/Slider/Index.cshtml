@@ -56,7 +56,7 @@
                                             <tr>
                                                 <td class="align-middle" width="150px">
                                                     <div>
-                                                        <img src="/dairy/img/@item.ImageUrl" class="rounded me-3" style="width:100px;height:75px;">
+                                                        <img src="/sliderImages/@item.ImageUrl" class="rounded me-3" style="width:100px;height:75px;">
                                                     </div>
                                                 </td>
 
@@ -67,16 +67,20 @@
                                                     <span class="text-s  mb-0">@item.Description2 </span>
                                                 </td>
                                                 <td width="100px" class="align-middle text-center">
-                                                    <a href="/Admin/Product/Delete/@item.SliderID" class="btn bg-gradient-danger ">Sil</a>
+                                                    <a href="/Admin/Slider/Delete/@item.ID" class="btn bg-gradient-danger ">Sil</a>
                                                 </td>
                                                 <td width="100px" class="align-middle text-center">
-                                                    <a href="/Admin/Product/Update/@item.SliderID" class="btn bg-gradient-warning ">Güncelle</a>
+                                                    <a href="/Admin/Slider/Update/@item.ID" class="btn bg-gradient-warning ">Güncelle</a>
                                                 </td>
 
                                             </tr>
                                         }
                                     </tbody>
                                 </table>
+                                <br />
+                                <div>
+                                    <a href="/Admin/Slider/Create/" class="btn btn-primary">Yeni Ürün Oluştur</a>
+                                </div>
                             </div>
                         </div>
                     </div>
