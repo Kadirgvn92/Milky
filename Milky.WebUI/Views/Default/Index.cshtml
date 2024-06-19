@@ -32,262 +32,27 @@
 
 
     <!-- About Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5 align-items-end">
-                <div class="col-lg-6">
-                    <div class="row g-2">
-                        <div class="col-6 position-relative wow fadeIn" data-wow-delay="0.7s">
-                            <div class="about-experience bg-secondary rounded">
-                                <h1 class="display-1 mb-0">25</h1>
-                                <small class="fs-5 fw-bold">Yıllık Tecrübe</small>
-                            </div>
-                        </div>
-                        <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
-                            <img class="img-fluid rounded" src="/dairy/img/service-1.jpg">
-                        </div>
-                        <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
-                            <img class="img-fluid rounded" src="/dairy/img/service-2.jpg">
-                        </div>
-                        <div class="col-6 wow fadeIn" data-wow-delay="0.5s">
-                            <img class="img-fluid rounded" src="/dairy/img/service-3.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <p class="section-title bg-white text-start text-primary pe-3">Hakkımızda</p>
-                    <h1 class="mb-4">Süt Çiftliğimiz ve Tarihimiz Hakkında Bilgi Edinin</h1>
-                    <p class="mb-4">Süt çiftliğimizde, yılların verdiği tecrübe ile kaliteli süt ürünleri üretmekteyiz. Süt ürünlerimiz özel bir özenle üretilmekte olup, en doğal ve lezzetli ürünleri sizler için sunmaktayız.</p>
-                    <div class="row g-5 pt-2 mb-5">
-                        <div class="col-sm-6">
-                            <img class="img-fluid mb-4" src="img/service.png" alt="">
-                            <h5 class="mb-3">Özel Hizmetler</h5>
-                            <span>Süt çiftliğimizde sizlere sunduğumuz özel hizmetler ile en iyi kalitede süt ürünlerini elde edersiniz. Kalitemizden ödün vermeden, her zaman en iyisini sunmaya çalışıyoruz.</span>
-                        </div>
-                        <div class="col-sm-6">
-                            <img class="img-fluid mb-4" src="img/product.png" alt="">
-                            <h5 class="mb-3">Organik Ürünler</h5>
-                            <span>Süt çiftliğimizde ürettiğimiz tüm ürünler organik ve doğal olarak yetiştirilmektedir. Sağlıklı ve lezzetli ürünlerimiz ile doğanın bize sunduklarını en iyi şekilde değerlendiriyoruz.</span>
-                        </div>
-                    </div>
-                    <a class="btn btn-secondary rounded-pill py-3 px-5" href="">Daha Fazlasını Keşfedin</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    @await Component.InvokeAsync("_DefaultAboutPartial")
     <!-- About End -->
 
 
     <!-- Features Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title bg-white text-start text-primary pe-3">Neden Biz?</p>
-                    <h1 class="mb-4">İnsanların Bizi Tercih Etme Nedenleri!</h1>
-                    <p class="mb-4">Süt ürünlerimizde sunduğumuz kalite ve tecrübemiz ile sizlere en iyisini sunuyoruz. Her zaman doğru ve dürüst hizmet anlayışıyla hareket ediyoruz. Müşteri memnuniyeti ve güven bizim için ön planda.</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>Müşteri memnuniyeti odaklı hizmet anlayışı</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>Kalite ve güvenilirlik</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>Doğal ve sağlıklı ürünler</p>
-                    <a class="btn btn-secondary rounded-pill py-3 px-5 mt-3" href="">Daha Fazlasını Keşfedin</a>
-                </div>
-                <div class="col-lg-6">
-                    <div class="rounded overflow-hidden">
-                        <div class="row g-0">
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                                <div class="text-center bg-primary py-5 px-4">
-                                    <img class="img-fluid mb-4" src="img/experience.png" alt="">
-                                    <h1 class="display-6 text-white" data-toggle="counter-up">25</h1>
-                                    <span class="fs-5 fw-semi-bold text-secondary">Yıllık Tecrübe</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-                                <div class="text-center bg-secondary py-5 px-4">
-                                    <img class="img-fluid mb-4" src="img/award.png" alt="">
-                                    <h1 class="display-6" data-toggle="counter-up">183</h1>
-                                    <span class="fs-5 fw-semi-bold text-primary">Ödül Kazanma</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                                <div class="text-center bg-secondary py-5 px-4">
-                                    <img class="img-fluid mb-4" src="img/animal.png" alt="">
-                                    <h1 class="display-6" data-toggle="counter-up">2619</h1>
-                                    <span class="fs-5 fw-semi-bold text-primary">Toplam Hayvan Sayısı</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
-                                <div class="text-center bg-primary py-5 px-4">
-                                    <img class="img-fluid mb-4" src="img/client.png" alt="">
-                                    <h1 class="display-6 text-white" data-toggle="counter-up">51940</h1>
-                                    <span class="fs-5 fw-semi-bold text-secondary">Memnun Müşteri</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    @await Component.InvokeAsync("_DefaultFeaturePartial")
     <!-- Features End -->
 
 
     <!-- Banner Start -->
-    <div class="container-fluid banner my-5 py-5" data-parallax="scroll" data-image-src="img/banner.jpg">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="row g-4 align-items-center">
-                        <div class="col-sm-4">
-                            <img class="img-fluid rounded" src="/dairy/img/banner-1.jpg" alt="">
-                        </div>
-                        <div class="col-sm-8">
-                            <h2 class=" mb-3">En İyi Süt Ürünlerini Satıyoruz</h2>
-                            <p class=" mb-4">Kalitemiz ve hizmet anlayışımızla size en iyisini sunuyoruz. Müşteri memnuniyeti odaklı yaklaşımımızla her zaman yanınızdayız.</p>
-                            <a class="btn btn-secondary rounded-pill py-2 px-4" href="">Daha Fazlasını Oku</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="row g-4 align-items-center">
-                        <div class="col-sm-4">
-                            <img class="img-fluid rounded" src="/dairy/img/banner-2.jpg" alt="">
-                        </div>
-                        <div class="col-sm-8">
-                            <h2 class=" mb-3">Taze Sütü Dünya Çapında Teslim Ediyoruz</h2>
-                            <p class=" mb-4">Doğal ve taze süt ürünlerimizle dünyanın dört bir yanına hizmet götürüyoruz. Sizin için en iyisini sağlamak için çalışıyoruz.</p>
-                            <a class="btn btn-secondary rounded-pill py-2 px-4" href="">Daha Fazlasını Oku</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    @await Component.InvokeAsync("_DefaultBannerPartial")
     <!-- Banner End -->
 
 
     <!-- Service Start -->
-     <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="section-title bg-white text-center text-primary px-3">Our Services</p>
-                <h1 class="mb-5">Services That We Offer For Entrepreneurs</h1>
-            </div>
-            <div class="row gy-5 gx-4">
-                <div class="col-lg-4 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item d-flex h-100">
-                        <div class="service-img">
-                            <img class="img-fluid" src="img/service-1.jpg" alt="">
-                        </div>
-                        <div class="service-text p-5 pt-0">
-                            <div class="service-icon">
-                                <img class="img-fluid rounded-circle" src="img/service-1.jpg" alt="">
-                            </div>
-                            <h5 class="mb-3">Best Animal Selection</h4>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            <a class="btn btn-square rounded-circle" href=""><i class="bi bi-chevron-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex h-100">
-                        <div class="service-img">
-                            <img class="img-fluid" src="img/service-2.jpg" alt="">
-                        </div>
-                        <div class="service-text p-5 pt-0">
-                            <div class="service-icon">
-                                <img class="img-fluid rounded-circle" src="img/service-2.jpg" alt="">
-                            </div>
-                            <h5 class="mb-3">Breeding & Veterinary</h5>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            <a class="btn btn-square rounded-circle" href=""><i class="bi bi-chevron-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item d-flex h-100">
-                        <div class="service-img">
-                            <img class="img-fluid" src="img/service-3.jpg" alt="">
-                        </div>
-                        <div class="service-text p-5 pt-0">
-                            <div class="service-icon">
-                                <img class="img-fluid rounded-circle" src="img/service-3.jpg" alt="">
-                            </div>
-                            <h5 class="mb-3">Care & Milking</h5>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            <a class="btn btn-square rounded-circle" href=""><i class="bi bi-chevron-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> 
+    @await Component.InvokeAsync("_DefaultServicePartial")
     <!-- Service End --> 
 
 
     <!-- Gallery Start -->
-    <div class="container-xxl py-5 px-0">
-        <div class="row g-0">
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="row g-0">
-                    <div class="col-12">
-                        <a class="d-block" href="/dairy/img/gallery-5.jpg" data-lightbox="gallery">
-                            <img class="img-fluid" src="/dairy/img/gallery-5.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="col-12">
-                        <a class="d-block" href="/dairy/img/gallery-1.jpg" data-lightbox="gallery">
-                            <img class="img-fluid" src="/dairy/img/gallery-1.jpg" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="row g-0">
-                    <div class="col-12">
-                        <a class="d-block" href="/dairy/img/gallery-2.jpg" data-lightbox="gallery">
-                            <img class="img-fluid" src="/dairy/img/gallery-2.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="col-12">
-                        <a class="d-block" href="/dairy/img/gallery-6.jpg" data-lightbox="gallery">
-                            <img class="img-fluid" src="/dairy/img/gallery-6.jpg" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="row g-0">
-                    <div class="col-12">
-                        <a class="d-block" href="/dairy/img/gallery-7.jpg" data-lightbox="gallery">
-                            <img class="img-fluid" src="/dairy/img/gallery-7.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="col-12">
-                        <a class="d-block" href="/dairy/img/gallery-3.jpg" data-lightbox="gallery">
-                            <img class="img-fluid" src="/dairy/img/gallery-3.jpg" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="row g-0">
-                    <div class="col-12">
-                        <a class="d-block" href="/dairy/img/gallery-4.jpg" data-lightbox="gallery">
-                            <img class="img-fluid" src="/dairy/img/gallery-4.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="col-12">
-                        <a class="d-block" href="/dairy/img/gallery-8.jpg" data-lightbox="gallery">
-                            <img class="img-fluid" src="/dairy/img/gallery-8.jpg" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @await Component.InvokeAsync("_DefaultGalleryPartial")
     <!-- Gallery End -->
 
 
@@ -297,102 +62,12 @@
 
 
     <!-- Team Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="section-title bg-white text-center text-primary px-3">Takım Arkadaşlarımız</p>
-                <h1 class="mb-5">Tecrübeli Takım Arkadaşları</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item rounded p-4">
-                        <img class="img-fluid rounded mb-4" src="/dairy/img/team-1.jpg" alt="">
-                        <h5>Osman Ağa</h5>
-                        <p class="text-primary">Kurucu</p>
-                        <div class="d-flex justify-content-center">
-                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item rounded p-4">
-                        <img class="img-fluid rounded mb-4" src="/dairy/img/team-2.jpg" alt="">
-                        <h5>Hüsamettin Dayı</h5>
-                        <p class="text-primary">Çiftçi</p>
-                        <div class="d-flex justify-content-center">
-                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item rounded p-4">
-                        <img class="img-fluid rounded mb-4" src="/dairy/img/team-3.jpg" alt="">
-                        <h5>Hamit Çiftçioğlu</h5>
-                        <p class="text-primary">Veteriner</p>
-                        <div class="d-flex justify-content-center">
-                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> 
+    @await Component.InvokeAsync("_DefaultTeamPartial")
     <!-- Team End -->
 
 
     <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="section-title bg-white text-center text-primary px-3">Referanslar</p>
-                <h1 class="mb-5">Süt Çiftliğimiz Hakkında İnsanların Ne Dediği</h1>
-            </div>
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="testimonial-img">
-                        <img class="img-fluid animated pulse infinite" src="/dairy/img/testimonial-1.jpg" alt="">
-                        <img class="img-fluid animated pulse infinite" src="/dairy/img/testimonial-2.jpg" alt="">
-                        <img class="img-fluid animated pulse infinite" src="/dairy/img/testimonial-3.jpg" alt="">
-                        <img class="img-fluid animated pulse infinite" src="/dairy/img/testimonial-4.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="testimonial-item">
-                            <img class="img-fluid mb-3" src="/dairy/img/testimonial-1.jpg" alt="">
-                            <p class="fs-5">Mükemmel bir deneyim</p>
-                            <h5>Hasan Taraklı</h5>
-                            <span class="text-primary">Tıbbi Satış Danışmanı</span>
-                        </div>
-                        <div class="testimonial-item">
-                            <img class="img-fluid mb-3" src="/dairy/img/testimonial-2.jpg" alt="">
-                            <p class="fs-5">Herkese tavsiye ediyorum. Param olsada bende alsam.</p>
-                            <h5>Rıza Baryam</h5>
-                            <span class="text-primary">Zanaatkar</span>
-                        </div>
-                        <div class="testimonial-item">
-                            <img class="img-fluid mb-3" src="/dairy/img/testimonial-3.jpg" alt="">
-                            <p class="fs-5">Sütleri Harika</p>
-                            <h5>Tüpçü Fikret</h5>
-                            <span class="text-primary">Tüpçü</span>
-                        </div>
-                        <div class="testimonial-item">
-                            <img class="img-fluid mb-3" src="/dairy/img/testimonial-4.jpg" alt="">
-                            <p class="fs-5">Tadı damağımda kaldı.</p>
-                            <h5>Tunca Hekim</h5>
-                            <span class="text-primary">Hekim</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @await Component.InvokeAsync("_DefaultTestimonialPartial")
 
     <!-- Testimonial End -->
 

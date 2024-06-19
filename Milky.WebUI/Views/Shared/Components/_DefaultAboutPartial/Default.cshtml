@@ -1,0 +1,52 @@
+﻿@using Milky.WebUI.DTOs.About
+
+@model List<ResultAboutDto>
+
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-end">
+            @foreach(var item in Model)
+            {
+                <div class="col-lg-6">
+                    <div class="row g-2">
+                        <div class="col-6 position-relative wow fadeIn" data-wow-delay="0.7s">
+                            <div class="about-experience bg-secondary rounded">
+                                <h1 class="display-1 mb-0">25</h1>
+                                <small class="fs-5 fw-bold">Yıllık Tecrübe</small>
+                            </div>
+                        </div>
+                        <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
+                            <img class="img-fluid rounded" src="/dairy/img/service-1.jpg">
+                        </div>
+                        <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
+                            <img class="img-fluid rounded" src="/dairy/img/service-2.jpg">
+                        </div>
+                        <div class="col-6 wow fadeIn" data-wow-delay="0.5s">
+                            <img class="img-fluid rounded" src="/dairy/img/service-3.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <p class="section-title bg-white text-start text-primary pe-3">Hakkımızda</p>
+                    <h1 class="mb-4">@item.Title</h1>
+                    <p class="mb-4">@item.Description</p>
+                    <div class="row g-5 pt-2 mb-5">
+                        <div class="col-sm-6">
+                            <img class="img-fluid mb-4" src="img/service.png" alt="">
+                            <h5 class="mb-3">@item.Subtitle1</h5>
+                            <span>@item.ShortDescription1</span>
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="img-fluid mb-4" src="img/product.png" alt="">
+                            <h5 class="mb-3">@item.Subtitle2</h5>
+                            <span>@item.ShortDescription2</span>
+                        </div>
+                    </div>
+                    <a class="btn btn-secondary rounded-pill py-3 px-5" href="">Daha Fazlasını Keşfedin</a>
+                </div>
+            }
+           
+        </div>
+    </div>
+</div>

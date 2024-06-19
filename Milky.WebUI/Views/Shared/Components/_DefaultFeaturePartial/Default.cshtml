@@ -1,0 +1,42 @@
+﻿@using Milky.WebUI.DTOs.Statistic
+
+@model List<ResultStatisticDto>
+
+@{
+    var itemCount = 0;
+    var classes = new[] { "bg-primary", "bg-warning", "bg-warning", "bg-primary" };
+}
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <p class="section-title bg-white text-start text-primary pe-3">Neden Biz?</p>
+                <h1 class="mb-4">İnsanların Bizi Tercih Etme Nedenleri!</h1>
+                <p class="mb-4">Süt ürünlerimizde sunduğumuz kalite ve tecrübemiz ile sizlere en iyisini sunuyoruz. Her zaman doğru ve dürüst hizmet anlayışıyla hareket ediyoruz. Müşteri memnuniyeti ve güven bizim için ön planda.</p>
+                <p><i class="fa fa-check text-primary me-3"></i>Müşteri memnuniyeti odaklı hizmet anlayışı</p>
+                <p><i class="fa fa-check text-primary me-3"></i>Kalite ve güvenilirlik</p>
+                <p><i class="fa fa-check text-primary me-3"></i>Doğal ve sağlıklı ürünler</p>
+                <a class="btn btn-secondary rounded-pill py-3 px-5 mt-3" href="">Daha Fazlasını Keşfedin</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="rounded overflow-hidden">
+                    <div class="row g-0">
+                        @foreach (var item in Model.Take(4))
+                        {
+                            var bgClass = classes[itemCount % classes.Length];
+                            itemCount++;
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                                <div class="text-center @bgClass py-5 px-4">
+                                    <img class="img-fluid mb-4" src="img/experience.png" alt="">
+                                    <h1 class="display-6 text-white" data-toggle="counter-up">@item.Count</h1>
+                                    <span class="fs-5 fw-semi-bold text-secondary">@item.Name</span>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
