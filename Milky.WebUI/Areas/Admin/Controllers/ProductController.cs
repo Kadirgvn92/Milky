@@ -56,6 +56,39 @@ public class ProductController : Controller
         }
         return View();
     }
+
+    [HttpGet]
+    public IActionResult Create()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create(CreateProductDto createProductDto)
+    {
+        var resource = Directory.GetCurrentDirectory();
+        var extension = Path.GetExtension(createProductDto.Image.FileName);
+        var imagename = GenerateName() + extension;
+        var savelocation = Path.Combine(resource, "wwwroot/productImages", imagename);
+
+        using (var stream = new FileStream(savelocation, FileMode.Create))
+        {
+            await createProductDto.Image.CopyToAsync(stream);
+        }
+        createProductDto.ImageUrl = imagename;
+
+
+        var client = _httpClientFactory.CreateClient();
+        var jsonData = JsonConvert.SerializeObject(createProductDto);
+        StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+        var responseMessage = await client.PostAsync("https://localhost:44320/api/Product", stringContent);
+        if (responseMessage.IsSuccessStatusCode)
+        {
+            return RedirectToAction("Index");
+        }
+        return View();
+    }
+
     [HttpGet]
     public async Task<IActionResult> Update(int id)
     {
