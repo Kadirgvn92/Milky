@@ -22,6 +22,7 @@ public class MilkyContext :DbContext
     public DbSet<Contact> Contacts { get; set; }
     public DbSet<Employee> Employees { get; set; }
     public DbSet<Services> Services { get; set; }
+    public DbSet<Newsletter> Newsletter { get; set; }
     public DbSet<SocialMedia>  SocialMedias { get; set; }
     public DbSet<Statistic>  Statistics { get; set; }
     public DbSet<Testimonial>  Testimonials { get; set; }

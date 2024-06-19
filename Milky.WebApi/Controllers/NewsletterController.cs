@@ -8,40 +8,40 @@ namespace Milky.WebApi.Controllers;
 [ApiController]
 public class NewsletterController : ControllerBase
 {
-    private readonly INewsletterService _NewsletterService;
+    private readonly INewsletterService _newsletterService;
 
-    public NewsletterController(INewsletterService NewsletterService)
+    public NewsletterController(INewsletterService newsletterService)
     {
-        _NewsletterService = NewsletterService;
+        _newsletterService = newsletterService;
     }
     [HttpGet]
     public IActionResult GetNewsletter()
     {
-        var values = _NewsletterService.TGetAll();
+        var values = _newsletterService.TGetAll();
         return Ok(values);
     }
     [HttpPost]
     public IActionResult CreateNewsletter(Newsletter Newsletter)
     {
-        _NewsletterService.TCreate(Newsletter);
+        _newsletterService.TCreate(Newsletter);
         return Ok("Abonelik başarıyla eklendi");
     }
     [HttpDelete]
     public IActionResult DeleteNewsletter(int id)
     {
-        _NewsletterService.TDelete(id);
+        _newsletterService.TDelete(id);
         return Ok("Abonelik başarıyla silindi");
     }
     [HttpPut]
     public IActionResult UpdateNewsletter(Newsletter Newsletter)
     {
-        _NewsletterService.TUpdate(Newsletter);
+        _newsletterService.TUpdate(Newsletter);
         return Ok("Abonelik başarılı şekilde güncellendi");
     }
     [HttpGet("GetNewsletterById")]
     public IActionResult GetNewsletterById(int id)
     {
-        var values = _NewsletterService.TGetByID(id);
+        var values = _newsletterService.TGetByID(id);
         return Ok(values);
     }
 }
