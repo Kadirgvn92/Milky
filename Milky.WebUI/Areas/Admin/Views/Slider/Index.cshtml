@@ -1,10 +1,12 @@
-﻿@using Milky.WebUI.Areas.Admin.Models
-@model ProductViewModel
+﻿@using Milky.WebUI.DTOs.Slider
+
+@model List<ResultSliderDto>
 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+
 
 <div class="content-wrapper">
     <div class="content mt-0 p-2">
@@ -13,16 +15,16 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <div class="card-title">Ürünler</div>
+                            <div class="card-title">Slider</div>
                         </div>
                         <div class="card-body">
 
                             <div class="card-body p-0">
                                 <div class="mailbox-controls">
                                     <div class="card-sub">
-                                        Ürünleri bu sayfada görüntüleyebilir veya güncelleyebilirsiniz.
+                                        Slider bu sayfada görüntüleyebilir veya güncelleyebilirsiniz.
                                     </div>
-                                    <div class="float-right">
+                                   @*  <div class="float-right">
                                         @Model.PageInfo.CurrentPage - @Model.PageInfo.ItemsPerPage / @Model.PageInfo.TotalPages()
                                         <div class="btn-group">
                                             @if (Model.PageInfo.CurrentPage > 1)
@@ -35,44 +37,40 @@
                                             }
                                         </div>
                                         <!-- /.btn-group -->
-                                    </div>
+                                    </div> *@
                                     <!-- /.float-right -->
                                 </div>
                                 <table class="table align-items-center table-striped mb-0">
                                     <thead>
                                         <tr>
-                                            <th class="text-uppercase text-primary text-sm font-weight-bolder ">Ürün Resmi</th>
-                                            <th class="text-uppercase text-primary text-sm font-weight-bolder ">Ürün Adı</th>
-                                            <th class="text-uppercase text-primary text-sm font-weight-bolder ">Yeni Fiyat</th>
-                                            <th class="text-uppercase text-primary text-sm font-weight-bolder ">Eski Fiyat</th>
+                                            <th class="text-uppercase text-primary text-sm font-weight-bolder ">Slider Resmi</th>
+                                            <th class="text-uppercase text-primary text-sm font-weight-bolder ">Açıklama - 1</th>
+                                            <th class="text-uppercase text-primary text-sm font-weight-bolder ">Açıklama - 2</th>
                                             <th class="text-uppercase text-primary text-sm font-weight-bolder text-center">Sil</th>
                                             <th class="text-uppercase text-primary text-sm font-weight-bolder text-center">Durum</th>
                                         </tr>
                                     </thead>
                                     <tbody class="border-top">
-                                        @foreach (var item in Model.Products)
+                                        @foreach (var item in Model)
                                         {
                                             <tr>
                                                 <td class="align-middle" width="150px">
                                                     <div>
-                                                        <img src="/productImages/@item.ImageUrl" class="rounded me-3" style="width:100px;height:75px;">
+                                                        <img src="/dairy/img/@item.ImageUrl" class="rounded me-3" style="width:100px;height:75px;">
                                                     </div>
                                                 </td>
-                                              
+
                                                 <td class="align-middle">
-                                                    <span class="text-s  mb-0">@item.ProductName</span>
+                                                    <span class="text-s  mb-0">@item.Description1</span>
                                                 </td>
                                                 <td class="align-middle">
-                                                    <span class="text-s  mb-0">@item.NewPrice ₺ </span>
-                                                </td>
-                                                <td class="align-middle">
-                                                    <span class="text-s  mb-0">@item.OldPrice ₺ </span>
+                                                    <span class="text-s  mb-0">@item.Description2 </span>
                                                 </td>
                                                 <td width="100px" class="align-middle text-center">
-                                                    <a href="/Admin/Product/Delete/@item.ID" class="btn bg-gradient-danger ">Sil</a>
+                                                    <a href="/Admin/Product/Delete/@item.SliderID" class="btn bg-gradient-danger ">Sil</a>
                                                 </td>
                                                 <td width="100px" class="align-middle text-center">
-                                                    <a href="/Admin/Product/Update/@item.ID" class="btn bg-gradient-warning ">Güncelle</a>
+                                                    <a href="/Admin/Product/Update/@item.SliderID" class="btn bg-gradient-warning ">Güncelle</a>
                                                 </td>
 
                                             </tr>
@@ -87,4 +85,3 @@
         </div>
     </div>
 </div>
-

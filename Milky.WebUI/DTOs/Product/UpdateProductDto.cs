@@ -1,6 +1,6 @@
 ﻿namespace Milky.WebUI.DTOs.Product;
 
-public class ResultProductDto
+public class UpdateProductDto
 {
     public int ID { get; set; }
     public string? ProductName { get; set; }
