@@ -1,0 +1,65 @@
+﻿@using Milky.WebUI.DTOs.About
+@model ResultAboutDto
+
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="content">
+        <div class="container-fluid p-2">
+            <div class="card h-100">
+                <div class="card-header p-3">
+                    <div class="row">
+                        <div class="col-md-8 d-flex align-items-center">
+                            <h6 class="mb-0 text-dark">Hakkımızda Düzenleme Ekranı</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="white_shd full margin_bottom_30">
+                            <div class="table_section padding_infor_info">
+                                <div class="table-responsive-sm m-2">
+                                    <!-- table section -->
+                                    <form method="post" enctype="multipart/form-data">
+                                        <input type="hidden" asp-for="ID" />
+                                        <div class="form-group p-1">
+                                            <label>Başlık</label>
+                                            <input type="text" class="form-control form-control-s" asp-for="Title" placeholder="Başlık girin">
+                                        </div>
+                                        <div class="form-group p-1">
+                                            <label>Açıklama</label>
+                                            <input type="text" class="form-control form-control-s" asp-for="Description" placeholder="Açıklama girin">
+                                        </div>
+                                        <div class="form-group p-1">
+                                            <label>1. Alt Başlık</label>
+                                            <input type="text" class="form-control form-control-s" asp-for="Subtitle1 " placeholder="1. Alt Başlık girin">
+                                        </div>
+                                        <div class="form-group p-1">
+                                            <label>2. Alt Başlık</label>
+                                            <input type="text" class="form-control form-control-s" asp-for="Subtitle2 " placeholder="2. Alt Başlık girin">
+                                        </div>
+                                        <div class="form-group p-1">
+                                            <label>1. Açıklama</label>
+                                            <input type="text" class="form-control form-control-s" asp-for="ShortDescription1 " placeholder="1. Açıklama girin">
+                                        </div>
+                                        <div class="form-group p-1">
+                                            <label>2. Açıklama</label>
+                                            <input type="text" class="form-control form-control-s" asp-for="ShortDescription2 " placeholder="2. Açıklama girin">
+                                        </div>
+                                        <div class="form-group p-1">
+                                            <button type="submit" class="btn btn-primary">Hakkımızda Güncelle</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
