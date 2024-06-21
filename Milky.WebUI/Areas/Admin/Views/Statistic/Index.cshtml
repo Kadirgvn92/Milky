@@ -1,0 +1,64 @@
+﻿@using Milky.WebUI.DTOs.Statistic
+
+@model List<ResultStatisticDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="content mt-0 p-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">İstatistikler</div>
+                        </div>
+                        <div class="card-body">
+
+                            <div class="card-body p-0">
+                                <div class="mailbox-controls">
+                                    <div class="card-sub">
+                                        İstaitstik bilgileri bu sayfada görüntüleyebilir veya güncelleyebilirsiniz.
+                                    </div>
+
+                                </div>
+                                <table class="table align-items-center table-striped mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-uppercase text-primary text-sm font-weight-bolder ">Başık </th>
+                                            <th class="text-uppercase text-primary text-sm font-weight-bolder ">İstatistik Değeri</th>
+                                            <th class="text-uppercase text-primary text-sm font-weight-bolder text-center">Durum</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="border-top">
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                
+                                                <td class="align-middle">
+                                                    <span class="text-s  mb-0">@item.Name</span>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <span class="text-s  mb-0">@item.Count </span>
+                                                </td>
+                                                <td width="100px" class="align-middle text-center">
+                                                    <a href="/Admin/Statistic/Update/@item.ID" class="btn bg-gradient-warning ">Güncelle</a>
+                                                </td>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
