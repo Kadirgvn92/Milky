@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using Milky.Entity.Concrete;
 using System;
@@ -9,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Milky.DataAccessLayer.Context;
-public class MilkyContext :DbContext
+public class MilkyContext : IdentityDbContext<AppUser, AppRole, int>
 {
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -23,9 +24,9 @@ public class MilkyContext :DbContext
     public DbSet<Employee> Employees { get; set; }
     public DbSet<Services> Services { get; set; }
     public DbSet<Newsletter> Newsletter { get; set; }
-    public DbSet<SocialMedia>  SocialMedias { get; set; }
-    public DbSet<Statistic>  Statistics { get; set; }
-    public DbSet<Testimonial>  Testimonials { get; set; }
+    public DbSet<SocialMedia> SocialMedias { get; set; }
+    public DbSet<Statistic> Statistics { get; set; }
+    public DbSet<Testimonial> Testimonials { get; set; }
     public DbSet<Product> Products { get; set; }
     public DbSet<Slider> Sliders { get; set; }
 }
