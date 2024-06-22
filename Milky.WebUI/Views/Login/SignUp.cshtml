@@ -16,7 +16,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="~/soft-ui-dashboard/assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="~/soft-ui-dashboard/assets/img/favicon.png">
     <title>
-        Soft UI Dashboard by Creative Tim
+        Milky Login
     </title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -38,7 +38,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-5 text-center mx-auto">
-                        <h1 class="text-white mb-2 mt-5">Blogy Dünyasına Hoşgelsiniz!</h1>
+                        <h1 class="text-white mb-2 mt-5">Milky Dünyasına Hoşgelsiniz!</h1>
                         <p class="text-lead text-white">Ücretsiz olarak kayıt olun ve olağanüstü deneyime sizde katılın.</p>
                     </div>
                 </div>
@@ -69,6 +69,10 @@
                                 <div class="mb-3">
                                     <input type="password"  asp-for="Password" class="form-control mb-2" placeholder="Şifre" aria-label="Password">
                                     <span asp-validation-for="Password" class="text-danger fs-6"> </span>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="password" asp-for="ConfirmPassword" class="form-control mb-2" placeholder="Şifre Tekrar" aria-label="Password">
+                                    <span asp-validation-for="ConfirmPassword" class="text-danger fs-6"> </span>
                                 </div>
                                 <div class="text-danger fs-6" asp-validation-summary="ModelOnly">
                                    </div>

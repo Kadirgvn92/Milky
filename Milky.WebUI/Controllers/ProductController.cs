@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Milky.WebUI.DTOs.Product;
 using Newtonsoft.Json;
 
 namespace Milky.WebUI.Controllers;
+[AllowAnonymous]
 public class ProductController : Controller
 {
     private readonly IHttpClientFactory _httpClientFactory;

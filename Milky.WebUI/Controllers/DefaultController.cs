@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Milky.WebUI.DTOs.Category;
 using Newtonsoft.Json;
 using System.Text.Json.Serialization;
 
 namespace Milky.WebUI.Controllers;
+[AllowAnonymous]
 public class DefaultController : Controller
 {
     private readonly IHttpClientFactory _httpClientFactory;

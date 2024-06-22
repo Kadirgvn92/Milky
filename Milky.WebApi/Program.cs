@@ -1,17 +1,21 @@
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Milky.BusinessLayer.Extensions;
 using Milky.DataAccessLayer.Context;
+using Milky.Entity.Concrete;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddDbContext<MilkyContext>();
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddIdentity<AppUser, AppRole>()
+    .AddEntityFrameworkStores<MilkyContext>()
+    .AddTokenProvider<DataProtectorTokenProvider<AppUser>>(TokenOptions.DefaultProvider);
+
 
 builder.Services.ContainerDependencies();
-
-builder.Services.AddDbContext<MilkyContext>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -28,7 +32,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+
+app.UseAuthentication();
 app.UseAuthorization();
+
 
 app.MapControllers();
 

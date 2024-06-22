@@ -30,6 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Milky.DataAccessLayer\Milky.DataAccessLayer.csproj" />
     <ProjectReference Include="..\Milky.DTO\Milky.DTO.csproj" />
     <ProjectReference Include="..\Milky.Entity\Milky.Entity.csproj" />
   </ItemGroup>
